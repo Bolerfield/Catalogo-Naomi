@@ -1,0 +1,56 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    text-align: center;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+}
+
+.contenedor-catalogo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.producto {
+    background: white;
+    margin: 15px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 300px; /* Tamaño de la tarjeta */
+}
+
+.producto img {
+    width: 100%;
+    border-radius: 5px;
+    height: auto;
+}
+
+.producto p {
+    color: #555;
+    font-size: 0.9rem;
+    margin: 15px 0;
+    height: 60px; /* Para que todos los textos midan lo mismo */
+}
+
+/* La mancha roja para el precio */
+.mancha-precio {
+    background-color: #d90429;
+    width: 120px;
+    height: 50px;
+    margin: 0 auto;
+    border-radius: 50% 20% 50% 30%; /* Forma irregular tipo mancha */
+    transform: rotate(-5deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+}
