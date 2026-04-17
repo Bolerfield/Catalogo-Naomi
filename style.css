@@ -1,56 +1,126 @@
+/* Importamos una fuente más elegante de Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400&display=swap');
+
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f9f9f9;
+    font-family: 'Poppins', sans-serif;
+    /* Fondo con un verde muy clarito y patrón de puntos suaves */
+    background-color: #f1f8e9;
+    background-image: radial-gradient(#dcedc8 1px, transparent 1px);
+    background-size: 20px 20px;
     margin: 0;
-    text-align: center;
+    padding: 40px;
+    /* Creamos el "Borde Floral" usando un gradiente y sombras */
+    border: 15px solid transparent;
+    border-image: linear-gradient(45deg, #81c784, #f8bbd0, #aed581, #f48fb1) 1;
+    min-height: 100vh;
 }
 
 header {
-    background-color: #333;
-    color: white;
-    padding: 20px 0;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+header h1 {
+    font-family: 'Playfair Display', serif;
+    color: #2e7d32;
+    font-size: 3rem;
+    margin: 0;
+    text-shadow: 2px 2px white;
+}
+
+header p {
+    color: #f06292;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
 }
 
 .contenedor-catalogo {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding: 20px;
+    gap: 30px;
 }
 
 .producto {
     background: white;
-    margin: 15px;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    width: 300px; /* Tamaño de la tarjeta */
+    padding: 15px;
+    border-radius: 20px;
+    /* Borde sutil que parece una rama delgada */
+    border: 3px solid #e8f5e9; 
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    width: 280px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.producto:hover {
+    transform: translateY(-10px);
+    border-color: #f8bbd0; /* Cambia a rosa al pasar el mouse */
 }
 
 .producto img {
     width: 100%;
-    border-radius: 5px;
-    height: auto;
+    border-radius: 15px;
+    border-bottom: 2px solid #f1f8e9;
 }
 
 .producto p {
-    color: #555;
-    font-size: 0.9rem;
+    color: #444;
+    font-size: 0.95rem;
     margin: 15px 0;
-    height: 60px; /* Para que todos los textos midan lo mismo */
+    line-height: 1.4;
 }
 
-/* La mancha roja para el precio */
+/* La Mancha Roja del Precio (Irregular) */
 .mancha-precio {
-    background-color: #d90429;
-    width: 120px;
-    height: 50px;
-    margin: 0 auto;
-    border-radius: 50% 20% 50% 30%; /* Forma irregular tipo mancha */
-    transform: rotate(-5deg);
+    background: #d90429;
+    color: white;
+    width: 100px;
+    height: 45px;
+    margin: 10px auto;
+    font-weight: bold;
+    font-size: 1.2rem;
     display: flex;
     align-items: center;
     justify-content: center;
+    /* Forma orgánica de mancha */
+    clip-path: polygon(20% 0%, 80% 10%, 100% 40%, 90% 80%, 50% 100%, 10% 85%, 0% 50%);
+    transform: rotate(-3deg);
+}
+
+/* El Botón de WhatsApp Primaveral */
+.boton-whatsapp {
+    display: inline-block;
+    background-color: #25d366;
     color: white;
+    text-decoration: none;
+    padding: 12px 20px;
+    margin-top: 10px;
+    border-radius: 30px; /* Más redondeado */
     font-weight: bold;
+    box-shadow: 0 4px 10px rgba(37, 211, 102, 0.3);
+    transition: all 0.3s ease;
+}
+
+.boton-whatsapp:hover {
+    background-color: #128c7e;
+    transform: scale(1.05);
+}
+
+/* Detalles decorativos en las esquinas (Opcional) */
+body::before {
+    content: "🌸";
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    font-size: 2rem;
+}
+
+body::after {
+    content: "🌿";
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 2rem;
 }
